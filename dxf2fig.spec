@@ -10,7 +10,6 @@ Source0: %{name}-%{version}.tar.bz2
 License: GPL
 Group: Graphics
 Url: http://ta.twi.tudelft.nl/ftp/dv/lemmens/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 
 %description
 dxf2fig parses Autocad DXF input, then calls external
