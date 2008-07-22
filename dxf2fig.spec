@@ -1,6 +1,6 @@
 %define name dxf2fig
 %define version 2.13
-%define release %mkrel 3
+%define release %mkrel 5
 
 Summary: Convert dxf files to xfig format
 Name: %{name}
