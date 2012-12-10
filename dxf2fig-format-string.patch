@@ -1,0 +1,13 @@
+Index: dxf2fig.c
+===================================================================
+--- dxf2fig.c
++++ dxf2fig.c	2011-05-08 18:05:11.663695189 +0200
+@@ -332,7 +332,7 @@
+ 	   "            -f <0-4>     : papersize , 0=A0, 1=A1, ... , 4=A4\n"
+ 	   "            -v [-v ...]  : give (lots of) debug information\n"
+ 	   ,basename);
+-   fprintf(stderr,filterhelp());
++   fprintf(stderr,"%s", filterhelp());
+    
+    exit(1);
+ }

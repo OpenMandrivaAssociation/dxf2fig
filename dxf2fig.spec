@@ -1,16 +1,12 @@
-%define name dxf2fig
-%define version 2.13
-%define release %mkrel 6
-
-Summary: Convert dxf files to xfig format
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: %{name}-%{version}.tar.bz2
-License: GPL
-Group: Graphics
-Url: http://ta.twi.tudelft.nl/ftp/dv/lemmens/
-BuildRoot: %{_tmppath}/%{name}-buildroot
+Summary:	Convert dxf files to xfig format
+Name:		dxf2fig
+Version:	2.13
+Release:	6
+License:	GPL
+Group:		Graphics
+Url:		http://ta.twi.tudelft.nl/ftp/dv/lemmens/
+Source0:	%{name}-%{version}.tar.bz2
+Patch0:		dxf2fig-format-string.patch
 
 %description
 dxf2fig parses Autocad DXF input, then calls external
@@ -21,20 +17,17 @@ preserved in the output file.
 
 %prep
 %setup -q
+%patch0 -p0 -b .fmt
 
 %build
-%make  CFLAGS="$RPM_OPT_FLAGS -DVERSION=\\\"\$(VERSION)\\\" -DMODDATE=\\\"\$(MODDATE)\\\""
+%make CFLAGS="%{optflags} -DVERSION=\\\"\$(VERSION)\\\" -DMODDATE=\\\"\$(MODDATE)\\\""
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p %buildroot%_bindir
-cp dxf2fig %buildroot%_bindir
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+mkdir -p %{buildroot}%{_bindir}
+cp dxf2fig %{buildroot}%{_bindir}
 
 %files
-%defattr(-,root,root)
 %doc README TODO Changelog
-%_bindir/dxf2fig
+%{_bindir}/dxf2fig
+
 
