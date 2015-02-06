@@ -1,7 +1,7 @@
 Summary:	Convert dxf files to xfig format
 Name:		dxf2fig
 Version:	2.13
-Release:	6
+Release:	7
 License:	GPL
 Group:		Graphics
 Url:		http://ta.twi.tudelft.nl/ftp/dv/lemmens/
