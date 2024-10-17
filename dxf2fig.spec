@@ -4,7 +4,7 @@ Version:	2.13
 Release:	7
 License:	GPL
 Group:		Graphics
-Url:		http://ta.twi.tudelft.nl/ftp/dv/lemmens/
+Url:		https://ta.twi.tudelft.nl/ftp/dv/lemmens/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		dxf2fig-format-string.patch
 
