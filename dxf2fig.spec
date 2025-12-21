@@ -8,6 +8,7 @@ Url:		https://ta.twi.tudelft.nl/ftp/dv/lemmens/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		dxf2fig-format-string.patch
 
+BuildRequires:	make
 %description
 dxf2fig parses Autocad DXF input, then calls external
 routines to do either plotting or a fig conversion for xfig.
